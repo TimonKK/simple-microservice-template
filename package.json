@@ -1,0 +1,59 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API server",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --testMatch=**/tests/api/**/*.js",
+    "start": "node dist/src/index.js",
+    "build": "./node_modules/.bin/tsc -p ./tsconfig.json",
+    "clean": "./node_modules/.bin/tsc --build --clean ./tsconfig.json && rm -rf dist",
+    "watch": "./node_modules/.bin/tsc -p ./tsconfig.json --watch",
+    "lint": "eslint --ext .ts src/**"
+  },
+  "keywords": [
+    "api",
+    "nat",
+    "mongo"
+  ],
+  "author": "Dmitry Berezhnov",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "body-parser": "1.20.0",
+    "express": "4.17.3",
+    "inversify": "6.0.1",
+    "mongodb": "2.2.34",
+    "mongoose": "4.13.21",
+    "mongoose-timestamp": "0.6.0",
+    "mongoose-unique-validator": "1.0.6",
+    "nconf": "^0.12.0",
+    "node-uuid": "1.4.8",
+    "passport": "0.5.2",
+    "passport-jwt": "4.0.0",
+    "passport-local": "1.0.0",
+    "passport-unique-token": "3.0.0",
+    "reflect-metadata": "0.1.13",
+    "tasu": "4.2.3",
+    "winston": "3.7.2"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.13",
+    "@types/glob": "7.2.0",
+    "@types/jest": "27.4.1",
+    "@types/lodash": "4.14.181",
+    "@types/mongoose": "5.7.12",
+    "@types/node": "17.0.24",
+    "@types/passport": "1.0.7",
+    "@types/sinon": "10.0.11",
+    "@types/supertest": "2.0.12",
+    "@typescript-eslint/eslint-plugin": "5.20.0",
+    "@typescript-eslint/parser": "5.20.0",
+    "eslint": "7.32.0",
+    "glob": "8.0.1",
+    "jest": "27.5.1",
+    "lodash": "4.17.21",
+    "sinon": "12.0.1",
+    "supertest": "6.2.2",
+    "typescript": "4.6.3"
+  }
+}
